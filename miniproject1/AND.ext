@@ -1,0 +1,21 @@
+timestamp 1694482832
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use nand nand_0 1 0 780 0 1 50
+use inverte inverte_0 1 0 920 0 1 140
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "inverte_0/Y" "nand_0/VP" 1.54746
+cap "inverte_0/Y" "nand_0/B" 0.0785422
+cap "nand_0/Y" "inverte_0/Y" 7.76209
+cap "nand_0/VP" "nand_0/VN" 1.42109e-13
+cap "nand_0/Y" "nand_0/VN" 24.2446
+cap "nand_0/VP" "nand_0/B" 2.45035
+cap "nand_0/Y" "nand_0/VP" 4.05673
+cap "nand_0/Y" "nand_0/B" 12.2575
+merge "inverte_0/VP" "nand_0/VP" -147.031 0 0 0 0 0 -560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -380 0 0 0 0 0 0 0 0 0 0
+merge "inverte_0/VN" "nand_0/VN" -100.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -380 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/VN" "VSUBS"
+merge "inverte_0/A" "nand_0/Y" -67.468 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0

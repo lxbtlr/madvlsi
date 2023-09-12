@@ -1,0 +1,23 @@
+magic
+tech sky130A
+timestamp 1694397293
+<< locali >>
+rect 120 235 145 255
+rect 535 235 560 255
+<< metal1 >>
+rect 120 440 140 535
+rect 120 275 140 370
+use inverte  inverte_0
+timestamp 1694375059
+transform 1 0 230 0 1 240
+box -110 -30 110 320
+use inverte  inverte_1
+timestamp 1694375059
+transform 1 0 450 0 1 240
+box -110 -30 110 320
+<< labels >>
+rlabel locali 120 245 120 245 7 A
+rlabel metal1 120 485 120 485 7 VP
+rlabel metal1 120 325 120 325 7 VN
+rlabel locali 560 245 560 245 3 Y
+<< end >>
