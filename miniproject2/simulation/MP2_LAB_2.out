@@ -1,0 +1,54 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/lxbtlr/mad/miniproject2/mp2_lab_2.sch
+
+binary raw file "/home/lxbtlr/MAD/miniproject2/simulation/MP2_LAB_2.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Note: include: has no value, DC 0 assumed
+No. of Data Columns : 208  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+x1.net2                                    1.8
+x1.net3                               0.366537
+vdd                                        1.8
+clk                                          0
+d                                            0
+net4                                       1.8
+x1.net1                               0.366537
+net3                                       1.8
+q1                                           0
+x1.net4                                    1.8
+x2.net2                                    1.8
+x2.net3                               0.366537
+x2.net1                               0.366537
+net2                                       1.8
+q2                                           0
+x2.net4                                    1.8
+x3.net2                                    1.8
+x3.net3                               0.366538
+x3.net1                               0.366538
+net1                                       1.8
+q3                                           0
+x3.net4                                    1.8
+x4.net2                                    1.8
+x4.net3                               0.366537
+x4.net1                               0.366537
+q_not                                      1.8
+q                                            0
+x4.net4                                    1.8
+sky130_fd_pr__esd_nfet_05v0_nvt.pm3               0
+                                             0
+vdd#branch                        -1.87282e-09
+v_clk#branch                                 0
+vin_d#branch                       1.37955e-10
+
+
+No. of Data Rows : 7604
+Internal Error: ft_cktcoms: bad commands

@@ -2,17 +2,18 @@
 **.subckt MP2_LAB_2 Q Q_not
 *.opin Q
 *.opin Q_not
-x1 net6 Q1 net5 net3 net4 CSRL_Latch
-x2 Q1 Q2 net3 net2 net4 CSRL_Latch
-x3 Q2 Q3 net2 net1 net4 CSRL_Latch
-x4 Q3 Q net1 Q_not net4 CSRL_Latch
-Vin_D net6 GND pwl(0 0 25n 0 26n 1.8 40n 1.8 41n 0)
-V_CLK net4 GND pulse(0 1.8 1ns 1ns 1ns 4ns 10ns)
+x1 D Q1 net4 net3 CLK CSRL_Latch
+x2 Q1 Q2 net3 net2 CLK CSRL_Latch
+x3 Q2 Q3 net2 net1 CLK CSRL_Latch
+x4 Q3 Q net1 Q_not CLK CSRL_Latch
+Vin_D D GND pwl(0 0 25n 0 26n 1.8 40n 1.8 41n 0)
+V_CLK CLK GND pulse(0 1.8 1ns 1ns 1ns 4ns 10ns)
 Vdd VDD GND 1.8
-x5 net5 net6 MP1_inverter
+x5 net4 D MP1_inverter
 **** begin user architecture code
 
 .tran 0.01n .075u
+.ic V(Q)=0 V(Q1)=0 V(Q2)=0 V(Q3)=0
 .saveall
 
 
