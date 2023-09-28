@@ -1,15 +1,15 @@
 ** sch_path: /home/lxbtlr/MAD/miniproject2/MP2_LAB_2.sch
-**.subckt MP2_LAB_2 Q Q_not
+**.subckt MP2_LAB_2 Q Q_NOT
 *.opin Q
-*.opin Q_not
-x1 D Q1 net4 net3 CLK CSRL_Latch
+*.opin Q_NOT
+x1 D Q1 D_NOT net3 CLK CSRL_Latch
 x2 Q1 Q2 net3 net2 CLK CSRL_Latch
 x3 Q2 Q3 net2 net1 CLK CSRL_Latch
-x4 Q3 Q net1 Q_not CLK CSRL_Latch
+x4 Q3 Q net1 Q_NOT CLK CSRL_Latch
 Vin_D D GND pwl(0 0 25n 0 26n 1.8 40n 1.8 41n 0)
 V_CLK CLK GND pulse(0 1.8 1ns 1ns 1ns 4ns 10ns)
 Vdd VDD GND 1.8
-x5 net4 D MP1_inverter
+x5 D_NOT D MP1_inverter
 **** begin user architecture code
 
 .tran 0.01n .075u

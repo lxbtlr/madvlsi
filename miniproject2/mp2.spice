@@ -1,0 +1,21 @@
+* NGSPICE file created from mp2.ext - technology: sky130A
+
+.subckt mp2 D_NOT D Q_NOT Q CLK VN VP
+X0 a_470_1890# a_n50_1280# a_340_1890# w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.25 pd=2.25 as=1 ps=5 w=2 l=0.15
+X1 VN a_n50_1280# a_n220_190# a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X2 Q_NOT a_n50_1280# a_n130_780# a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X3 a_340_1890# Q Q_NOT w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.45 ps=2.9 w=1 l=0.15
+X4 a_n130_780# CLK a_n220_190# a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X5 Q Q_NOT VN a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X6 VP a_n50_1280# a_470_1890# w_n230_1240# sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=0.25 ps=2.25 w=2 l=0.15
+X7 VN Q Q_NOT a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.45 ps=2.9 w=1 l=0.15
+X8 VP a_n130_780# CLK w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.49 ps=2.98 w=1 l=0.15
+X9 CLK a_n50_1280# D w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X10 a_n220_190# a_n130_780# CLK a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X11 a_450_690# a_n50_1280# CLK a_n220_190# sky130_fd_pr__nfet_01v8 ad=0.25 pd=2.25 as=1 ps=5 w=2 l=0.15
+X12 a_n130_780# CLK VP w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X13 Q a_n50_1280# a_450_690# a_n220_190# sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=0.25 ps=2.25 w=2 l=0.15
+X14 Q Q_NOT a_340_1890# w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X15 a_n130_780# a_n50_1280# D_NOT w_n230_1240# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+

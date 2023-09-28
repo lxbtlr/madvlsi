@@ -1,0 +1,96 @@
+magic
+tech sky130A
+timestamp 1695824946
+<< isosubstrate >>
+rect -115 662 -59 702
+<< nwell >>
+rect -290 984 0 1085
+rect -75 844 0 984
+rect 451 871 463 1076
+rect 913 1074 921 1075
+rect 913 871 923 1074
+rect -1 843 0 844
+rect 453 790 466 810
+rect 913 789 928 809
+rect 453 681 463 700
+rect 909 680 924 700
+<< poly >>
+rect -14 731 16 747
+<< locali >>
+rect -102 789 15 810
+rect 453 790 466 810
+rect 906 806 929 810
+rect 913 790 928 806
+rect 1373 790 1386 810
+rect 1833 790 1874 810
+rect -329 664 -290 684
+rect -27 679 51 700
+rect 453 683 463 700
+rect 453 679 472 683
+rect 909 680 924 700
+rect 1372 680 1385 700
+rect 1834 680 1875 700
+rect -27 640 -6 679
+rect -165 620 -6 640
+<< metal1 >>
+rect -294 869 -285 964
+rect -71 869 0 964
+rect 451 874 463 1075
+rect 913 1074 921 1075
+rect 913 874 923 1074
+rect 450 870 470 874
+rect 908 870 931 874
+rect 1375 870 1380 1075
+rect -299 704 -290 799
+rect -71 704 -36 799
+rect -69 115 -36 704
+rect 455 464 461 465
+rect 455 265 462 464
+rect 911 265 924 465
+rect 1372 265 1385 465
+rect -69 15 1 115
+rect 453 15 460 115
+rect 915 15 922 115
+rect 1374 15 1381 115
+use inverte  inverte_0
+timestamp 1694482630
+transform 1 0 -180 0 1 669
+box -110 -30 110 315
+use mp2  mp2_0
+timestamp 1695824946
+transform 1 0 115 0 1 -80
+box -115 80 345 1165
+use mp2  mp2_1
+timestamp 1695824946
+transform 1 0 575 0 1 -80
+box -115 80 345 1165
+use mp2  mp2_2
+timestamp 1695824946
+transform 1 0 1035 0 1 -80
+box -115 80 345 1165
+use mp2  mp2_3
+timestamp 1695824946
+transform 1 0 1495 0 1 -80
+box -115 80 345 1165
+<< labels >>
+rlabel locali 461 802 462 803 1 Q1
+port 7 n
+rlabel locali 920 801 921 802 1 Q2
+port 8 n
+rlabel locali 1379 802 1380 803 1 Q3
+port 9 n
+rlabel locali 1875 690 1875 690 3 Q_NOT
+port 4 e
+rlabel locali 1874 800 1874 800 3 Q
+port 3 e
+rlabel poly -14 739 -14 739 1 CLK
+port 10 n
+rlabel metal1 -299 749 -299 749 1 VN
+port 5 n
+rlabel metal1 -294 912 -294 912 1 VP
+port 6 n
+rlabel locali -329 675 -329 675 3 D
+port 1 e
+rlabel locali -41 810 -41 810 1 D_NOT
+port 2 n
+<< end >>
