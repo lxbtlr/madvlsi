@@ -37,15 +37,24 @@ N 10 -90 60 -90 {
 lab=CLK}
 N 490 -40 510 -40 {
 lab=Q}
+N 20 -0 30 0 {
+lab=D_NOT}
+N -60 -0 -50 0 {
+lab=D}
+N -50 -40 -50 -0 {
+lab=D}
+N -50 -40 30 -40 {
+lab=D}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 70 -20 0 0 {name=x1}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 190 -20 0 0 {name=x2}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 310 -20 0 0 {name=x3}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 430 -20 0 0 {name=x4}
 C {devices/opin.sym} 510 -40 0 0 {name=p1 lab=Q}
 C {devices/opin.sym} 490 -20 0 0 {name=p2 lab=Q_not}
-C {devices/ipin.sym} 30 -40 0 0 {name=p3 lab=D}
-C {devices/ipin.sym} 30 0 0 0 {name=p4 lab=D_NOT}
+C {devices/ipin.sym} -60 0 0 0 {name=p3 lab=D}
 C {devices/ipin.sym} 10 -90 0 0 {name=p5 lab=CLK}
 C {devices/lab_pin.sym} 140 -40 1 0 {name=p6 sig_type=std_logic lab=Q1}
 C {devices/lab_pin.sym} 260 -40 1 0 {name=p7 sig_type=std_logic lab=Q2}
 C {devices/lab_pin.sym} 380 -40 1 0 {name=p8 sig_type=std_logic lab=Q3}
+C {/home/lxbtlr/MAD/miniproject1/MP1_inverter.sym} 40 60 0 0 {name=x5}
+C {devices/lab_wire.sym} 20 0 0 0 {name=p4 sig_type=std_logic lab=D_NOT}

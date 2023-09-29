@@ -1,30 +1,32 @@
 * NGSPICE file created from 4bit_shift.ext - technology: sky130A
 
-.subckt mp2 D_NOT D Q_NOT Q VN
-X0 a_470_1890# a_n50_1280# a_340_1890# Q_NOT sky130_fd_pr__pfet_01v8 ad=0.25 pd=2.25 as=1 ps=5 w=2 l=0.15
-X1 VN a_n50_1280# Q_NOT Q_NOT sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-X2 Q_NOT a_n50_1280# a_n130_780# Q_NOT sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-X3 a_340_1890# Q Q_NOT Q_NOT sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.45 ps=2.9 w=1 l=0.15
-X4 a_n130_780# Q_NOT Q_NOT Q_NOT sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
-X5 Q Q_NOT VN Q_NOT sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
-X6 Q_NOT a_n50_1280# a_470_1890# Q_NOT sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=0.25 ps=2.25 w=2 l=0.15
-X7 VN Q Q_NOT Q_NOT sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.45 ps=2.9 w=1 l=0.15
-X8 Q_NOT a_n130_780# Q_NOT Q_NOT sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=3.95 ps=22.9 w=1 l=0.15
-X9 Q_NOT a_n50_1280# D Q_NOT sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-X10 Q_NOT a_n130_780# Q_NOT Q_NOT sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=4.45 ps=25.9 w=1 l=0.15
-X11 a_450_690# a_n50_1280# Q_NOT Q_NOT sky130_fd_pr__nfet_01v8 ad=0.25 pd=2.25 as=1 ps=5 w=2 l=0.15
-X12 a_n130_780# Q_NOT Q_NOT Q_NOT sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
-X13 Q a_n50_1280# a_450_690# Q_NOT sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=0.25 ps=2.25 w=2 l=0.15
-X14 Q Q_NOT a_340_1890# Q_NOT sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
-X15 a_n130_780# a_n50_1280# D_NOT Q_NOT sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+*.subckt x4bit_shift D D_NOT VN VP
+Xmp2_0 mp2_1/D D VP VN mp2_3/CLK mp2_1/D_NOT D_NOT mp2
+Xmp2_1 mp2_2/D mp2_1/D VP VN mp2_3/CLK mp2_2/D_NOT mp2_1/D_NOT mp2
+Xmp2_2 mp2_3/D mp2_2/D VP VN mp2_3/CLK mp2_3/D_NOT mp2_2/D_NOT mp2
+Xmp2_3 mp2_3/Q mp2_3/D VP VN mp2_3/CLK mp2_3/Q_NOT mp2_3/D_NOT mp2
+Xinverte_0 D D_NOT VP VN inverte
+
+.subckt mp2 Q D VP VN CLK Q_NOT D_NOT
+X0 Q Q_NOT a_1900_1980# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.733 ps=3.13 w=1 l=0.15
+X1 Q_NOT Q a_1900_1980# VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.733 ps=3.13 w=1 l=0.15
+X2 a_1750_810# Q_NOT Q VN sky130_fd_pr__nfet_01v8 ad=0.6 pd=3.37 as=0.35 ps=1.7 w=1 l=0.15
+X3 VP Q_NOT a_1450_1410# VP sky130_fd_pr__pfet_01v8 ad=0.933 pd=3.53 as=0.25 ps=1.5 w=1 l=0.15
+X4 Q_NOT CLK Q_NOT VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=1.7 ps=9.4 w=1 l=0.15
+X5 Q Q_NOT VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.833 ps=3.33 w=1 l=0.15
+X6 a_1450_1410# CLK D VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X7 a_1750_810# Q Q_NOT VN sky130_fd_pr__nfet_01v8 ad=0.6 pd=3.37 as=0.35 ps=1.7 w=1 l=0.15
+X8 VP a_1450_1410# Q_NOT VP sky130_fd_pr__pfet_01v8 ad=0.933 pd=3.53 as=0.25 ps=1.5 w=1 l=0.15
+X9 a_1900_1980# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0.733 pd=3.13 as=0.933 ps=3.53 w=4 l=0.15
+X10 Q_NOT Q VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.833 ps=3.33 w=1 l=0.15
+X11 VN CLK a_1750_810# VN sky130_fd_pr__nfet_01v8 ad=0.833 pd=3.33 as=0.6 ps=3.37 w=4 l=0.15
+X12 Q_NOT CLK D_NOT VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X13 Q CLK a_1450_1410# VN sky130_fd_pr__nfet_01v8 ad=0.35 pd=1.7 as=0.5 ps=3 w=1 l=0.15
 .ends
 
-
-* Top level circuit 4bit_shift
-
-Xmp2_0 mp2_0/D_NOT mp2_0/D VSUBS mp2_0/Q mp2_3/VN mp2
-Xmp2_1 mp2_0/Q VSUBS VSUBS mp2_1/Q mp2_3/VN mp2
-Xmp2_2 mp2_1/Q VSUBS VSUBS mp2_2/Q mp2_3/VN mp2
-Xmp2_3 mp2_2/Q VSUBS VSUBS mp2_3/Q mp2_3/VN mp2
+.subckt inverte A Y VP VN
+X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
+X1 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
+.ends
 .end
 

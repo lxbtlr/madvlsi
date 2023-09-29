@@ -66,7 +66,7 @@ lab=CLK}
 N 270 -80 290 -80 {
 lab=Q}
 N -270 -40 -190 -40 {
-lab=#net4}
+lab=D_NOT}
 N -340 -80 -190 -80 {
 lab=D}
 N -340 -80 -340 -40 {
@@ -82,7 +82,7 @@ C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} -30 -60 0 0 {name=x2}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 90 -60 0 0 {name=x3}
 C {/home/lxbtlr/MAD/miniproject2/CSRL_Latch.sym} 210 -60 0 0 {name=x4}
 C {devices/opin.sym} 290 -80 0 0 {name=p1 lab=Q}
-C {devices/opin.sym} 270 -60 0 0 {name=p2 lab=Q_not}
+C {devices/opin.sym} 270 -60 0 0 {name=p2 lab=Q_NOT}
 C {devices/lab_pin.sym} -80 -80 1 0 {name=p6 sig_type=std_logic lab=Q1}
 C {devices/lab_pin.sym} 40 -80 1 0 {name=p7 sig_type=std_logic lab=Q2}
 C {devices/lab_pin.sym} 160 -80 1 0 {name=p8 sig_type=std_logic lab=Q3}
@@ -112,3 +112,4 @@ tclcommand="xschem raw_read $netlist_dir/MP2_LAB_2.raw tran"
 }
 C {devices/lab_wire.sym} -260 -130 0 0 {name=p3 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} -240 -80 0 0 {name=p4 sig_type=std_logic lab=D}
+C {devices/lab_wire.sym} -220 -40 0 0 {name=p5 sig_type=std_logic lab=D_NOT}

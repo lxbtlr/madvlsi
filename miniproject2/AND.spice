@@ -1,0 +1,21 @@
+* NGSPICE file created from AND.ext - technology: sky130A
+
+.subckt inverte A Y VP VN
+X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
+X1 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
+.ends
+
+.subckt nand B A Y VN VP
+X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.275 pd=1.55 as=0.55 ps=3.1 w=1 l=0.15
+X1 VP B Y VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.275 ps=1.55 w=1 l=0.15
+X2 a_n480_160# A VN VN sky130_fd_pr__nfet_01v8 ad=0.275 pd=1.55 as=0.55 ps=3.1 w=1 l=0.15
+X3 Y B a_n480_160# VN sky130_fd_pr__nfet_01v8 ad=0.55 pd=3.1 as=0.275 ps=1.55 w=1 l=0.15
+.ends
+
+
+* Top level circuit AND
+
+Xinverte_0 nand_0/Y inverte_0/Y nand_0/VP VSUBS inverte
+Xnand_0 nand_0/B nand_0/A nand_0/Y VSUBS nand_0/VP nand
+.end
+

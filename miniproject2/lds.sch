@@ -30,9 +30,9 @@ lab=VDD}
 N 630 70 630 110 {
 lab=VDD}
 N 620 140 620 340 {
-lab=#net4}
+lab=CLK}
 N 620 140 660 140 {
-lab=#net4}
+lab=CLK}
 N 660 340 660 370 {
 lab=Q}
 N 660 370 660 430 {
@@ -76,29 +76,17 @@ lab=#net2}
 N 520 480 550 430 {
 lab=#net2}
 N 580 400 580 480 {
-lab=#net5}
+lab=#net4}
 N 690 400 690 480 {
 lab=GND}
 N 690 460 760 460 {
 lab=GND}
-N 660 580 660 630 {
-lab=#net4}
-N 690 540 690 550 {
-lab=Q}
-N 630 520 690 540 {
-lab=Q}
+N 620 580 620 630 {
+lab=CLK}
 N 630 480 630 520 {
 lab=Q}
-N 660 510 720 530 {
-lab=Q_not}
-N 720 530 720 600 {
-lab=Q_not}
-N 690 600 720 600 {
-lab=Q_not}
-N 620 630 660 630 {
-lab=#net4}
 N 620 340 620 630 {
-lab=#net4}
+lab=CLK}
 N 510 10 510 110 {
 lab=VDD}
 N 510 220 520 220 {
@@ -108,15 +96,15 @@ lab=VDD}
 N 510 10 520 10 {
 lab=VDD}
 N 550 110 550 180 {
-lab=#net4}
+lab=CLK}
 N 550 630 620 630 {
-lab=#net4}
+lab=CLK}
 N 550 70 550 110 {
-lab=#net4}
+lab=CLK}
 N 550 70 620 70 {
-lab=#net4}
+lab=CLK}
 N 620 70 620 140 {
-lab=#net4}
+lab=CLK}
 N 580 150 580 220 {
 lab=#net2}
 N 580 80 590 80 {
@@ -134,15 +122,11 @@ lab=D}
 N 520 480 520 530 {
 lab=#net2}
 N 580 480 580 600 {
-lab=#net5}
+lab=#net4}
 N 590 320 610 320 {
 lab=#net1}
-N 610 320 610 550 {
+N 590 320 590 550 {
 lab=#net1}
-N 610 550 630 550 {
-lab=#net1}
-N 520 530 630 600 {
-lab=#net2}
 N 520 640 760 640 {
 lab=GND}
 N 690 250 760 250 {
@@ -155,6 +139,24 @@ N 520 600 520 640 {
 lab=GND}
 N 590 80 610 80 {
 lab=#net1}
+N 630 520 650 550 {
+lab=Q}
+N 660 510 660 600 {
+lab=Q_not}
+N 650 600 660 600 {
+lab=Q_not}
+N 650 550 650 580 {
+lab=Q}
+N 590 550 590 580 {
+lab=#net1}
+N 520 530 520 550 {
+lab=#net2}
+N 550 580 650 600 {
+lab=Q_not}
+N 620 630 620 700 {
+lab=CLK}
+N 600 700 620 700 {
+lab=CLK}
 C {madvlsi/pmos3.sym} 550 80 3 0 {name=Q28
 L=0.15
 W=1
@@ -185,7 +187,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 660 550 3 0 {name=Q30
+C {madvlsi/nmos3.sym} 620 580 3 0 {name=Q30
 L=0.15
 W=4
 body=GND
@@ -200,7 +202,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 660 600 3 0 {name=Q31
+C {madvlsi/nmos3.sym} 550 550 3 0 {name=Q31
 L=0.15
 W=1
 body=GND
@@ -371,3 +373,4 @@ C {madvlsi/vdd.sym} 630 -10 0 0 {name=l8 lab=VDD}
 C {madvlsi/gnd.sym} 520 640 0 0 {name=l9 lab=GND}
 C {devices/opin.sym} 760 250 0 0 {name=p1 lab=Q}
 C {devices/opin.sym} 760 310 0 0 {name=p2 lab=Q_not}
+C {devices/ipin.sym} 600 700 0 0 {name=p9 lab=CLK}

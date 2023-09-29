@@ -1,0 +1,58 @@
+** sch_path: /home/lxbtlr/MAD/MP1_LAB.sch
+**.subckt MP1_LAB Out
+*.opin Out
+x1 net1 Out net2 MP1_and
+Vdd VDD GND 1.8
+Vin_a net1 GND pulse(0 1.8 1ns 1ns 1ns 4ns 12ns)
+C1 Out GND 200f m=1
+Vin_b net2 GND pulse(0 1.8 1ns 1ns 2ns 6ns 12ns)
+**** begin user architecture code
+
+.option wnflag=1
+.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+
+
+.tran 0.01n 1u .save all
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/lxbtlr/MAD/MP1_and.sym # of pins=3
+** sym_path: /home/lxbtlr/MAD/MP1_and.sym
+** sch_path: /home/lxbtlr/MAD/MP1_and.sch
+.subckt MP1_and A Out B
+*.ipin A
+*.ipin B
+*.opin Out
+x1 A net1 B MP1_nand
+x2 net2 net1 MP1_inverter
+.ends
+
+
+* expanding   symbol:  /home/lxbtlr/MAD/MP1_nand.sym # of pins=3
+** sym_path: /home/lxbtlr/MAD/MP1_nand.sym
+** sch_path: /home/lxbtlr/MAD/MP1_nand.sch
+.subckt MP1_nand A Out B
+*.ipin A
+*.ipin B
+*.opin Out
+M1 Out A VDD DMP2035U m=1
+M2 Out B VDD DMP2035U m=1
+M3 Out A net1 M2N7002 m=1
+M4 net1 B GND M2N7002 m=1
+.ends
+
+
+* expanding   symbol:  /home/lxbtlr/MAD/MP1_inverter.sym # of pins=2
+** sym_path: /home/lxbtlr/MAD/MP1_inverter.sym
+** sch_path: /home/lxbtlr/MAD/MP1_inverter.sch
+.subckt MP1_inverter Out A
+*.ipin A
+*.opin Out
+M2 Out A VDD DMP2035U m=1
+M1 Out A GND M2N7002 m=1
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end

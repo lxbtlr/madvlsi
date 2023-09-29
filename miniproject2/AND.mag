@@ -1,0 +1,12 @@
+magic
+tech sky130A
+timestamp 1694482832
+use inverte  inverte_0
+timestamp 1694482630
+transform 1 0 460 0 1 70
+box -110 -30 110 315
+use nand  nand_0
+timestamp 1694482748
+transform 1 0 390 0 1 25
+box -385 -25 -40 360
+<< end >>
