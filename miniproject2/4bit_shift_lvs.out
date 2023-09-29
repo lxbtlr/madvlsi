@@ -1,0 +1,27 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell mp2 in circuit 4bit_shift.spice (0)(4 instances)
+Flattening unmatched subcell inverte in circuit 4bit_shift.spice (0)(1 instance)
+Flattening unmatched subcell CSRL_Latch in circuit simulation/4BIT_SHIFT_REGISTER.spice (1)(4 instances)
+Flattening unmatched subcell MP1_inverter in circuit simulation/4BIT_SHIFT_REGISTER.spice (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: 4bit_shift.spice                |Circuit 2: simulation/4BIT_SHIFT_REGISTER. 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (29)               |sky130_fd_pr__pfet_01v8 (29)               
+sky130_fd_pr__nfet_01v8 (29)               |sky130_fd_pr__nfet_01v8 (29)               
+Number of devices: 58                      |Number of devices: 58                      
+Number of nets: 29                         |Number of nets: 29                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes 4bit_shift.spice and simulation/4BIT_SHIFT_REGISTER.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

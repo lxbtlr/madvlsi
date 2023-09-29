@@ -6,25 +6,27 @@ X1 Q_NOT Q a_1900_1980# VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.733 ps=3.
 X2 a_1750_810# a_1560_2580# a_1510_2350# VN sky130_fd_pr__nfet_01v8 ad=0.6 pd=3.37 as=0.35 ps=1.7 w=1 l=0.15
 X3 VP a_1560_2580# a_1510_2350# VP sky130_fd_pr__pfet_01v8 ad=0.933 pd=3.53 as=0.25 ps=1.5 w=1 l=0.15
 X4 a_1560_2580# CLK Q_NOT VN sky130_fd_pr__nfet_01v8 ad=0.35 pd=1.7 as=0.5 ps=3 w=1 l=0.15
-X5 Q Q_NOT VN VN sky130_fd_pr__nfet_01v8 ad=0.51 pd=3.02 as=0.833 ps=3.33 w=1 l=0.15
+X5 Q Q_NOT VN VN sky130_fd_pr__nfet_01v8 ad=0.51 pd=3.02 as=0.667 ps=3.5 w=1 l=0.15
 X6 a_1510_2350# CLK D VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
 X7 a_1750_810# a_1510_2350# a_1560_2580# VN sky130_fd_pr__nfet_01v8 ad=0.6 pd=3.37 as=0.35 ps=1.7 w=1 l=0.15
 X8 VP a_1510_2350# a_1560_2580# VP sky130_fd_pr__pfet_01v8 ad=0.933 pd=3.53 as=0.25 ps=1.5 w=1 l=0.15
 X9 a_1900_1980# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0.733 pd=3.13 as=0.933 ps=3.53 w=4 l=0.15
-X10 Q_NOT Q VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.833 ps=3.33 w=1 l=0.15
-X11 VN CLK a_1750_810# VN sky130_fd_pr__nfet_01v8 ad=0.833 pd=3.33 as=0.6 ps=3.37 w=4 l=0.15
+X10 Q_NOT Q VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.667 ps=3.5 w=1 l=0.15
+X11 VN CLK a_1750_810# VN sky130_fd_pr__nfet_01v8 ad=0.667 pd=3.5 as=0.6 ps=3.37 w=4 l=0.15
 X12 a_1560_2580# CLK D_NOT VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
 X13 a_1510_2350# CLK Q VN sky130_fd_pr__nfet_01v8 ad=0.35 pd=1.7 as=0.5 ps=3 w=1 l=0.15
 .ends
+
 .subckt inverte A Y VP VN
 X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
 X1 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.55 pd=3.1 as=0.55 ps=3.1 w=1 l=0.15
 .ends
 
-*.subckt x4bit_shift D D_NOT VN VP
-Xmp2_0 D VP VN mp2_3/CLK mp2_1/D mp2_1/D_NOT D_NOT mp2
+*.subckt x4bit_shift D VN VP
+Xmp2_0 D VP VN mp2_3/CLK mp2_1/D mp2_1/D_NOT mp2_0/D_NOT mp2
 Xmp2_1 mp2_1/D VP VN mp2_3/CLK mp2_2/D mp2_2/D_NOT mp2_1/D_NOT mp2
 Xmp2_2 mp2_2/D VP VN mp2_3/CLK mp2_3/D mp2_3/D_NOT mp2_2/D_NOT mp2
 Xmp2_3 mp2_3/D VP VN mp2_3/CLK mp2_3/Q mp2_3/Q_NOT mp2_3/D_NOT mp2
-Xinverte_0 D D_NOT VP VN inverte
+Xinverte_0 D mp2_0/D_NOT VP VN inverte
 .end
+
