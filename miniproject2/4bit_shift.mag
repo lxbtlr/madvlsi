@@ -1,65 +1,59 @@
 magic
 tech sky130A
-timestamp 1695957321
+timestamp 1696022310
 << isosubstrate >>
-rect -75 862 -19 902
+rect -60 862 -4 902
 << nwell >>
-rect -250 1390 145 1425
-rect -250 1040 130 1390
+rect -210 1040 65 1425
 << locali >>
-rect 8 1270 125 1271
-rect -75 1250 125 1270
-rect -75 1160 -55 1250
-rect 20 980 130 1000
-rect -289 864 -250 884
-rect 20 840 40 980
-rect -125 820 40 840
+rect 23 1270 65 1271
+rect -30 1250 65 1270
+rect -30 1160 -10 1250
+rect 35 980 65 1000
+rect -199 864 -160 884
+rect 35 840 55 980
+rect -105 820 55 840
 << metal1 >>
-rect -5 1390 145 1425
-rect -5 1164 40 1390
-rect -254 1069 -245 1164
-rect -31 1069 40 1164
-rect -30 999 5 1000
-rect -259 904 -250 999
-rect -31 904 5 999
-rect -30 430 5 904
-rect -30 425 130 430
-rect -30 350 135 425
-rect 125 245 135 350
-rect 125 215 145 245
+rect 10 1390 65 1425
+rect 10 1164 55 1390
+rect -204 1069 -195 1164
+rect -16 1069 55 1164
+rect -15 999 20 1000
+rect -204 904 -195 999
+rect -16 904 20 999
+rect -15 430 20 904
+rect -15 350 65 430
 use inverte  inverte_0
 timestamp 1694482630
-transform 1 0 -140 0 1 869
+transform 1 0 -95 0 1 869
 box -110 -30 110 315
 use mp2  mp2_0
-timestamp 1695957321
-transform 1 0 -520 0 1 -75
-box 645 290 1150 1500
+timestamp 1696021598
+transform 1 0 -635 0 1 -75
+box 695 295 1115 1500
 use mp2  mp2_1
-timestamp 1695957321
-transform 1 0 -15 0 1 -75
-box 645 290 1150 1500
+timestamp 1696021598
+transform 1 0 -215 0 1 -75
+box 695 295 1115 1500
 use mp2  mp2_2
-timestamp 1695957321
-transform 1 0 490 0 1 -75
-box 645 290 1150 1500
+timestamp 1696021598
+transform 1 0 205 0 1 -75
+box 695 295 1115 1500
 use mp2  mp2_3
-timestamp 1695957321
-transform 1 0 995 0 1 -75
-box 645 290 1150 1500
+timestamp 1696021598
+transform 1 0 625 0 1 -75
+box 695 295 1115 1500
 << labels >>
-rlabel metal1 -259 949 -259 949 1 VN
-port 5 n
-rlabel metal1 -254 1112 -254 1112 1 VP
+rlabel space 60 845 60 845 7 CLK
+port 10 w
+rlabel metal1 -204 1112 -204 1112 1 VP
 port 6 n
-rlabel locali -289 875 -289 875 3 D
+rlabel metal1 -204 949 -204 949 1 VN
+port 5 n
+rlabel locali -199 875 -199 875 3 D
 port 1 e
-rlabel locali 69 1271 69 1271 1 D_NOT
-port 2 n
-rlabel space 125 840 125 840 7 CLK
-port 7 w
-rlabel space 2145 1255 2145 1255 3 Q_NOT
-port 8 e
-rlabel space 2145 990 2145 990 3 Q
+rlabel space 1740 990 1740 990 3 Q
 port 9 e
+rlabel space 1740 1255 1740 1255 3 Q_NOT
+port 8 e
 << end >>
