@@ -1,0 +1,87 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/lxbtlr/mad/miniproject3/test_harness.sch
+
+binary raw file "/home/lxbtlr/MAD/miniproject3/simulation/test_harness.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Note: include: has no value, DC 0 assumed
+No. of Data Columns : 4  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Note: One successful gmin step
+Trying gmin =   1.0000E-09 Note: One successful gmin step
+Trying gmin =   3.1623E-10 Note: One successful gmin step
+Trying gmin =   5.6234E-11 Note: One successful gmin step
+Trying gmin =   5.6234E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 12607
+No. of Data Columns : 4  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Note: One successful gmin step
+Trying gmin =   1.0000E-09 Note: One successful gmin step
+Trying gmin =   1.0000E-10 Note: One successful gmin step
+Trying gmin =   1.0000E-11 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+x1.net6                               0.330899
+net3                                  0.656848
+x1.net5                                1.47654
+net4                                   1.09659
+vdd                                        1.8
+x1.net4                                1.79007
+x1.net2                               0.557096
+net1                                  0.920505
+out                                     1.7879
+net2                                   1.02726
+x1.net1                                0.38634
+x1.net3                               0.437722
+v_1                                          1
+v_2                                        0.5
+x2.net2                               0.706362
+x2.net1                               0.299666
+x2.net4                                1.64685
+x2.net3                               0.985179
+sky130_fd_pr__esd_nfet_05v0_nvt.pm3               0
+                                             0
+v_1#branch                                   0
+v_2#branch                                   0
+vdd#branch                        -6.19818e-06
+
+
+No. of Data Rows : 10008
+
+Total analysis time (seconds) = 1.053
+
+Total elapsed time (seconds) = 6.599 
+
+Total DRAM available = 15765.152 MB.
+DRAM currently available = 1076.484 MB.
+Maximum ngspice program size =  350.133 MB.
+Current ngspice program size =  332.594 MB.
+
+Shared ngspice pages =   10.625 MB.
+Text (code) pages =    5.449 MB.
+Stack = 0 bytes.
+Library pages =  330.195 MB.
+
