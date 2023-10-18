@@ -1,23 +1,38 @@
-** sch_path: /home/lxbtlr/MAD/miniproject3/test_harness_q22.sch
-**.subckt test_harness_q22 out
-*.opin out
-x1 net4 net1 V_2 net5 V_1 net2 net3 f_cascode_diff_amp
+** sch_path: /home/lxbtlr/MAD/miniproject3/test_harness_q23.sch
+**.subckt test_harness_q23 VQout Vout
+*.opin VQout
+*.opin Vout
+x1 net4 net1 VQout VQout V_1 net2 net3 f_cascode_diff_amp
 x2 net4 net1 net2 net3 bias_generator
 Vdd VDD GND 1.8
-V_2 V_2 GND 0.86
-V_1 V_1 GND 1
-C1 out GND 2p m=1
-V_3 out GND 1
-Vmeas net5 out 0
-.save i(vmeas)
+C1 VQout GND 2p m=1
+x3 net8 net5 net10 Vout V_1 net6 net7 f_cascode_diff_amp
+x4 net8 net5 net6 net7 bias_generator
+V_3 net10 net9 0 AC {1-B}
+V_4 net9 Vout 0 AC {B}
+B1 net9 GND V=v(VQout)
+C2 Vout GND 2p m=1
+V1 V_1 GND 0.81
 **** begin user architecture code
 
 .option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
 
 
-.dc V_1 0 1.8 .001
-.save v(out) v(V_1) v(V_2) i(Vmeas)
+.param B = 0
+.control
+ac dec 20 1 1e9
+alterparam B = 1
+reset
+ac dec 20 1 1e9
+setplot new
+setcurplottitle=Loopgain
+let frequency = ac1.frequency
+let T = (ac1.i(V_4) + ac2.i(V_3)) / (ac1.i(V1) + ac2.i(V_4))
+let Tmag = db(T)
+let Tphase = 180 * cph(T)/pi
+plot Tmag Tphase xlog
+.endc
 
 **** end user architecture code
 **.ends

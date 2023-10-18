@@ -47,8 +47,6 @@ N 340 -20 340 -10 {
 lab=#net1}
 N 340 -40 340 -30 {
 lab=#net4}
-N 120 190 200 10 {
-lab=out}
 C {/home/lxbtlr/MAD/miniproject3/f_cascode_diff_amp.sym} 80 10 0 0 {name=x1}
 C {/home/lxbtlr/MAD/miniproject3/bias_generator.sym} 410 70 0 0 {name=x2}
 C {madvlsi/vsource.sym} -220 -170 0 0 {name=Vdd
@@ -76,9 +74,10 @@ value=".option wnflag=1
 }
 C {devices/lab_wire.sym} -230 -20 0 0 {name=p2 sig_type=std_logic lab=V_2}
 C {devices/lab_wire.sym} -120 40 0 0 {name=p3 sig_type=std_logic lab=V_1}
-C {madvlsi/vsource.sym} 120 220 0 0 {name=Vout_q22
-value=1.2}
-C {madvlsi/gnd.sym} 120 250 0 0 {name=l1 lab=GND}
-C {devices/code_shown.sym} 510 -60 0 0 {name=SPICE2 only_toplevel=false value="
-.dc V_1 0 1.8 .001 
-.save v(out) v(V_1) v(V_2)"}
+C {devices/code_shown.sym} 530 -70 0 0 {name=SPICE2 only_toplevel=false value=".control
+dc V_1 0 1.8 .001 
+run
+plot v(out) v(V_1) v(V_2)
+.endc"}
+C {devices/code_shown.sym} 320 -140 0 0 {name=SPICE3 only_toplevel=false value=".dc V_1 0 1.8 .001 
+.save v(out) v(V_1) v(V_2) i(Vmeas)"}

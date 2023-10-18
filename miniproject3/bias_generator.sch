@@ -136,8 +136,8 @@ lab=Vbn}
 N 140 -160 150 -160 {
 lab=Vbn}
 C {madvlsi/pmos3.sym} -150 -330 0 0 {name=M1
-L=0.75
-W=1
+L=2.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -151,8 +151,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -30 -330 0 0 {name=M2
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -166,8 +166,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -150 -220 0 0 {name=M3
-L=0.15
-W=4
+L=0.5
+W=48
 body=GND
 nf=1
 mult=1
@@ -181,8 +181,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -30 -220 2 0 {name=M4
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -196,8 +196,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -150 -130 0 0 {name=M5
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -213,8 +213,8 @@ spiceprefix=X
 C {madvlsi/vdd.sym} -90 -380 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} -150 -60 0 0 {name=l2 lab=GND}
 C {madvlsi/pmos3.sym} 230 -370 0 0 {name=M6
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -228,8 +228,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 230 -270 0 0 {name=M7
-L=0.15
-W=4
+L=0.5
+W=48
 body=VDD
 nf=1
 mult=1
@@ -243,8 +243,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 370 -270 2 0 {name=M8
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -258,8 +258,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 230 -160 0 0 {name=M9
-L=0.75
-W=1
+L=2.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -273,8 +273,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 370 -160 0 0 {name=M10
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -296,8 +296,8 @@ C {devices/opin.sym} 70 -220 0 0 {name=p6 lab=Vcn}
 C {madvlsi/isource.sym} -30 -600 0 0 {name=I1
 value=1u}
 C {madvlsi/nmos3.sym} -30 -510 2 0 {name=M11
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -311,8 +311,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 120 -510 0 0 {name=M12
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -328,8 +328,8 @@ spiceprefix=X
 C {madvlsi/gnd.sym} -30 -470 0 0 {name=l5 lab=GND}
 C {madvlsi/gnd.sym} 120 -470 0 0 {name=l6 lab=GND}
 C {madvlsi/pmos3.sym} 120 -600 0 0 {name=M13
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
