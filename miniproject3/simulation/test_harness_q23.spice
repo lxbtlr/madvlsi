@@ -28,7 +28,7 @@ ac dec 20 1 1e9
 setplot new
 setcurplottitle=Loopgain
 let frequency = ac1.frequency
-let T = (ac1.i(V_4) + ac2.i(V_3)) / (ac1.i(V1) + ac2.i(V_4))
+let T = (ac1.i(V_4) + ac2.i(V_3)) / (ac1.i(V_3) + ac2.i(V_4))
 let Tmag = db(T)
 let Tphase = 180 * cph(T)/pi
 plot Tmag Tphase xlog
