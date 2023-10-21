@@ -1,139 +1,305 @@
-** sch_path: /home/lxbtlr/MAD/miniproject3/test_harness_q23.sch
-**.subckt test_harness_q23 VQout Vout
-*.opin VQout
-*.opin Vout
-x1 net4 net1 VQout VQout V_1 net2 net3 f_cascode_diff_amp
-x2 net4 net1 net2 net3 bias_generator
-Vdd VDD GND 1.8
-C1 VQout GND 2p m=1
-x3 net8 net5 net10 Vout V_1 net6 net7 f_cascode_diff_amp
-x4 net8 net5 net6 net7 bias_generator
-V_3 net10 net9 0 AC {1-B}
-V_4 net9 Vout 0 AC {B}
-B1 net9 GND V=v(VQout)
-C2 Vout GND 2p m=1
+** TEST_HARNESS_Q23 flat netlist
+*.OPIN VQOUT
+*.OPIN VOUT
+*--------BEGIN_X1->F_CASCODE_DIFF_AMP
+*.IPIN V_1
+*.IPIN V_2
+*.IPIN VCP
+*.IPIN VCN
+*.OPIN OUT
+*.IPIN VBP
+*.IPIN VBN
+*--------BEGIN_X1_XM11->SKY130_FD_PR__NFET_01V8
+XM11_X1 X1_NET4 VQOUT X1_NET6 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM11->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM10->SKY130_FD_PR__NFET_01V8
+XM10_X1 X1_NET5 V_1 X1_NET6 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM10->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM1->SKY130_FD_PR__NFET_01V8
+XM1_X1 X1_NET6 NET3 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X1_XM1->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM8->SKY130_FD_PR__NFET_01V8
+XM8_X1 GND X1_NET2 X1_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM8->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM9->SKY130_FD_PR__NFET_01V8
+XM9_X1 X1_NET3 X1_NET2 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM9->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM7->SKY130_FD_PR__NFET_01V8
+XM7_X1 VQOUT NET2 X1_NET3 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X1_XM7->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM2->SKY130_FD_PR__NFET_01V8
+XM2_X1 X1_NET2 NET2 X1_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM2->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X1_XM5->SKY130_FD_PR__PFET_01V8
+XM5_X1 X1_NET2 NET1 X1_NET5 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X1_XM5->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X1_XM6->SKY130_FD_PR__PFET_01V8
+XM6_X1 VQOUT NET1 X1_NET4 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X1_XM6->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X1_XM4->SKY130_FD_PR__PFET_01V8
+XM4_X1 X1_NET4 NET4 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X1_XM4->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X1_XM3->SKY130_FD_PR__PFET_01V8
+XM3_X1 X1_NET5 NET4 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X1_XM3->SKY130_FD_PR__PFET_01V8
+*--------END___X1->F_CASCODE_DIFF_AMP
+*--------BEGIN_X2->BIAS_GENERATOR
+*.OPIN VBP
+*.OPIN VBN
+*.OPIN VCP
+*.OPIN VCN
+*--------BEGIN_X2_XM1->SKY130_FD_PR__PFET_01V8
+XM1_X2 X2_NET2 NET4 VDD VDD  SKY130_FD_PR__PFET_01V8 L=2.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM1->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X2_XM2->SKY130_FD_PR__PFET_01V8
+XM2_X2 NET2 NET4 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM2->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X2_XM3->SKY130_FD_PR__NFET_01V8
+XM3_X2 X2_NET2 X2_NET2 X2_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=48 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X2_XM3->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM4->SKY130_FD_PR__NFET_01V8
+XM4_X2 X2_NET1 NET2 NET2 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM4->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM5->SKY130_FD_PR__NFET_01V8
+XM5_X2 X2_NET1 X2_NET2 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X2_XM5->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM6->SKY130_FD_PR__PFET_01V8
+XM6_X2 X2_NET4 X2_NET3 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X2_XM6->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X2_XM7->SKY130_FD_PR__PFET_01V8
+XM7_X2 X2_NET3 X2_NET3 X2_NET4 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=48 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X2_XM7->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X2_XM8->SKY130_FD_PR__PFET_01V8
+XM8_X2 X2_NET4 NET1 NET1 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM8->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X2_XM9->SKY130_FD_PR__NFET_01V8
+XM9_X2 X2_NET3 NET3 GND GND  SKY130_FD_PR__NFET_01V8 L=2.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM9->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM10->SKY130_FD_PR__NFET_01V8
+XM10_X2 NET1 NET3 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM10->SKY130_FD_PR__NFET_01V8
+I1_X2 GND NET3 1U
+*--------BEGIN_X2_XM11->SKY130_FD_PR__NFET_01V8
+XM11_X2 GND NET3 NET3 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM11->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM12->SKY130_FD_PR__NFET_01V8
+XM12_X2 NET4 NET3 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM12->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X2_XM13->SKY130_FD_PR__PFET_01V8
+XM13_X2 NET4 NET4 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X2_XM13->SKY130_FD_PR__PFET_01V8
+*--------END___X2->BIAS_GENERATOR
+VDD VDD GND 1.8
+C1 VQOUT GND 2P M=1
+*--------BEGIN_X3->F_CASCODE_DIFF_AMP
+*.IPIN V_1
+*.IPIN V_2
+*.IPIN VCP
+*.IPIN VCN
+*.OPIN OUT
+*.IPIN VBP
+*.IPIN VBN
+*--------BEGIN_X3_XM11->SKY130_FD_PR__NFET_01V8
+XM11_X3 X3_NET4 NET10 X3_NET6 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM11->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM10->SKY130_FD_PR__NFET_01V8
+XM10_X3 X3_NET5 V_1 X3_NET6 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM10->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM1->SKY130_FD_PR__NFET_01V8
+XM1_X3 X3_NET6 NET7 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X3_XM1->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM8->SKY130_FD_PR__NFET_01V8
+XM8_X3 GND X3_NET2 X3_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM8->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM9->SKY130_FD_PR__NFET_01V8
+XM9_X3 X3_NET3 X3_NET2 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM9->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM7->SKY130_FD_PR__NFET_01V8
+XM7_X3 VOUT NET6 X3_NET3 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X3_XM7->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM2->SKY130_FD_PR__NFET_01V8
+XM2_X3 X3_NET2 NET6 X3_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM2->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X3_XM5->SKY130_FD_PR__PFET_01V8
+XM5_X3 X3_NET2 NET5 X3_NET5 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X3_XM5->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X3_XM6->SKY130_FD_PR__PFET_01V8
+XM6_X3 VOUT NET5 X3_NET4 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X3_XM6->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X3_XM4->SKY130_FD_PR__PFET_01V8
+XM4_X3 X3_NET4 NET8 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X3_XM4->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X3_XM3->SKY130_FD_PR__PFET_01V8
+XM3_X3 X3_NET5 NET8 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X3_XM3->SKY130_FD_PR__PFET_01V8
+*--------END___X3->F_CASCODE_DIFF_AMP
+*--------BEGIN_X4->BIAS_GENERATOR
+*.OPIN VBP
+*.OPIN VBN
+*.OPIN VCP
+*.OPIN VCN
+*--------BEGIN_X4_XM1->SKY130_FD_PR__PFET_01V8
+XM1_X4 X4_NET2 NET8 VDD VDD  SKY130_FD_PR__PFET_01V8 L=2.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM1->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X4_XM2->SKY130_FD_PR__PFET_01V8
+XM2_X4 NET6 NET8 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM2->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X4_XM3->SKY130_FD_PR__NFET_01V8
+XM3_X4 X4_NET2 X4_NET2 X4_NET1 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=48 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X4_XM3->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM4->SKY130_FD_PR__NFET_01V8
+XM4_X4 X4_NET1 NET6 NET6 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM4->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM5->SKY130_FD_PR__NFET_01V8
+XM5_X4 X4_NET1 X4_NET2 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X4_XM5->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM6->SKY130_FD_PR__PFET_01V8
+XM6_X4 X4_NET4 X4_NET3 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X4_XM6->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X4_XM7->SKY130_FD_PR__PFET_01V8
+XM7_X4 X4_NET3 X4_NET3 X4_NET4 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=48 NF=1 AD='INT((NF+1)/2)*W/NF*0.29'
++ AS='INT((NF+2)/2)*W/NF*0.29' PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W'
++ NRS='0.29/W' SA=0 SB=0 SD=0 MULT=1 M=1
+*--------END___X4_XM7->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X4_XM8->SKY130_FD_PR__PFET_01V8
+XM8_X4 X4_NET4 NET5 NET5 VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM8->SKY130_FD_PR__PFET_01V8
+*--------BEGIN_X4_XM9->SKY130_FD_PR__NFET_01V8
+XM9_X4 X4_NET3 NET7 GND GND  SKY130_FD_PR__NFET_01V8 L=2.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM9->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM10->SKY130_FD_PR__NFET_01V8
+XM10_X4 NET5 NET7 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM10->SKY130_FD_PR__NFET_01V8
+I1_X4 GND NET7 1U
+*--------BEGIN_X4_XM11->SKY130_FD_PR__NFET_01V8
+XM11_X4 GND NET7 NET7 GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM11->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM12->SKY130_FD_PR__NFET_01V8
+XM12_X4 NET8 NET7 GND GND  SKY130_FD_PR__NFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM12->SKY130_FD_PR__NFET_01V8
+*--------BEGIN_X4_XM13->SKY130_FD_PR__PFET_01V8
+XM13_X4 NET8 NET8 VDD VDD  SKY130_FD_PR__PFET_01V8 L=0.5 W=12 NF=1 AD='INT((NF+1)/2)*W/NF*0.29' AS='INT((NF+2)/2)*W/NF*0.29'
++ PD='2*INT((NF+1)/2)*(W/NF+0.29)' PS='2*INT((NF+2)/2)*(W/NF+0.29)' NRD='0.29/W' NRS='0.29/W' SA=0 SB=0
++ SD=0 MULT=1 M=1
+*--------END___X4_XM13->SKY130_FD_PR__PFET_01V8
+*--------END___X4->BIAS_GENERATOR
+V_3 NET10 NET9 0 AC {1-B}
+V_4 NET9 VOUT 0 AC {B}
+B1 NET9 GND V=V(VQOUT)
+C2 VOUT GND 2P M=1
 V1 V_1 GND 0.81
-**** begin user architecture code
+**** BEGIN USER ARCHITECTURE CODE
 
-.option wnflag=1
+.OPTION WNFLAG=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
 
 
-.param B = 0
+.PARAM B=0
 .control
 ac dec 20 1 1e9
-alterparam B = 1
+alterparam B=1
 reset
 ac dec 20 1 1e9
 setplot new
 setcurplottitle=Loopgain
-let frequency = ac1.frequency
-let T = (ac1.i(V_4) + ac2.i(V_3)) / (ac1.i(V_3) + ac2.i(V_4))
-let Tmag = db(T)
-let Tphase = 180 * cph(T)/pi
+let frequency=ac1.frequency
+let T=(ac1.i(V_4) + ac2.i(V_3)) / (ac1.i(V_3) + ac2.i(V_4))
+let Tmag=db(T)
+let Tphase=180 * cph(T)/pi
 plot Tmag Tphase xlog
 .endc
 
-**** end user architecture code
-**.ends
-
-* expanding   symbol:  /home/lxbtlr/MAD/miniproject3/f_cascode_diff_amp.sym # of pins=7
-** sym_path: /home/lxbtlr/MAD/miniproject3/f_cascode_diff_amp.sym
-** sch_path: /home/lxbtlr/MAD/miniproject3/f_cascode_diff_amp.sch
-.subckt f_cascode_diff_amp Vbp Vcp V_2 out V_1 Vcn Vbn
-*.ipin V_1
-*.ipin V_2
-*.ipin Vcp
-*.ipin Vcn
-*.opin out
-*.ipin Vbp
-*.ipin Vbn
-XM11 net4 V_2 net6 GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM10 net5 V_1 net6 GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM1 net6 Vbn GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM8 GND net2 net1 GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM9 net3 net2 GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM7 out Vcn net3 GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM2 net2 Vcn net1 GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM5 net2 Vcp net5 VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM6 out Vcp net4 VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM4 net4 Vbp VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM3 net5 Vbp VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  /home/lxbtlr/MAD/miniproject3/bias_generator.sym # of pins=4
-** sym_path: /home/lxbtlr/MAD/miniproject3/bias_generator.sym
-** sch_path: /home/lxbtlr/MAD/miniproject3/bias_generator.sch
-.subckt bias_generator Vbp Vcp Vcn Vbn
-*.opin Vbp
-*.opin Vbn
-*.opin Vcp
-*.opin Vcn
-XM1 net2 Vbp VDD VDD sky130_fd_pr__pfet_01v8 L=2.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM2 Vcn Vbp VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM3 net2 net2 net1 GND sky130_fd_pr__nfet_01v8 L=0.5 W=48 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM4 net1 Vcn Vcn GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM5 net1 net2 GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM6 net4 net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM7 net3 net3 net4 VDD sky130_fd_pr__pfet_01v8 L=0.5 W=48 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM8 net4 Vcp Vcp VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM9 net3 Vbn GND GND sky130_fd_pr__nfet_01v8 L=2.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM10 Vcp Vbn GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-I1 GND Vbn 1u
-XM11 GND Vbn Vbn GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM12 Vbp Vbn GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM13 Vbp Vbp VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-.GLOBAL VDD
-.GLOBAL GND
+**** END USER ARCHITECTURE CODE
 .end

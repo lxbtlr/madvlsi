@@ -1,0 +1,37 @@
+* NGSPICE file created from diffamp.ext - technology: sky130A
+
+*.subckt diffamp Vcp Vbp V1 V2 Vbn Vcn VN VP
+X0 a_60_n11840# Vcn a_n320_n11840# VN sky130_fd_pr__nfet_01v8 ad=1.5 pd=12.2 as=8.4 ps=13.4 w=12 l=0.5
+X1 a_n1430_n6210# a_n570_n11970# a_60_n9340# VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=1.5 ps=12.2 w=12 l=0.5
+X2 a_n1430_n6000# Vbn a_n1430_n6210# VN sky130_fd_pr__nfet_01v8 ad=6.6 pd=25.1 as=6.6 ps=25.1 w=12 l=0.5
+X3 a_n1430_n6450# Vbn a_n1430_n6660# VN sky130_fd_pr__nfet_01v8 ad=6.6 pd=25.1 as=6.6 ps=25.1 w=12 l=0.5
+X4 a_n570_n11970# Vcn a_n470_n9340# VN sky130_fd_pr__nfet_01v8 ad=6 pd=25 as=1.5 ps=12.2 w=12 l=0.5
+X5 a_460_n2580# Vbp a_60_n80# VP sky130_fd_pr__pfet_01v8 ad=3 pd=12.5 as=9 ps=13.5 w=12 l=0.5
+X6 a_n320_n11840# Vcn a_n470_n11840# VN sky130_fd_pr__nfet_01v8 ad=8.4 pd=13.4 as=1.5 ps=12.2 w=12 l=0.5
+X7 a_60_n9340# Vcn a_n570_n11970# VN sky130_fd_pr__nfet_01v8 ad=1.5 pd=12.2 as=6 ps=25 w=12 l=0.5
+X8 VN VN a_n1430_n6210# VN sky130_fd_pr__nfet_01v8 ad=6 pd=25 as=3 ps=12.5 w=12 l=0.5
+X9 a_n570_n11970# Vcp a_n720_n2580# VP sky130_fd_pr__pfet_01v8 ad=6 pd=25 as=9 ps=13.5 w=12 l=0.5
+X10 VN VN a_60_n80# VN sky130_fd_pr__nfet_01v8 ad=6 pd=25 as=3 ps=12.5 w=12 l=0.5
+X11 a_60_n80# Vcp a_n320_n11840# VP sky130_fd_pr__pfet_01v8 ad=9 pd=13.5 as=8.4 ps=13.4 w=12 l=0.5
+X12 a_n1120_n5500# VN VN VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=6 ps=25 w=12 l=0.5
+X13 a_n1430_n6210# a_n570_n11970# a_60_n11840# VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=1.5 ps=12.2 w=12 l=0.5
+X14 a_60_n5500# Vcp a_n570_n11970# VP sky130_fd_pr__pfet_01v8 ad=9 pd=13.5 as=6 ps=25 w=12 l=0.5
+X15 a_60_n80# V2 a_n1430_n6000# VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=9 ps=13.5 w=12 l=0.5
+X16 a_n1430_n6450# V2 a_n1120_n5500# VN sky130_fd_pr__nfet_01v8 ad=9 pd=13.5 as=3 ps=12.5 w=12 l=0.5
+X17 VP VP a_460_n2580# VP sky130_fd_pr__pfet_01v8 ad=6 pd=25 as=3 ps=12.5 w=12 l=0.5
+X18 a_n1120_n5500# Vbp a_n920_n2580# VP sky130_fd_pr__pfet_01v8 ad=9 pd=13.5 as=3 ps=12.5 w=12 l=0.5
+X19 a_n1430_n6660# VN VN VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=6 ps=25 w=12 l=0.5
+X20 VP VP a_460_n2580# VP sky130_fd_pr__pfet_01v8 ad=6 pd=25 as=3 ps=12.5 w=12 l=0.5
+X21 a_n1430_n6660# VN VN VN sky130_fd_pr__nfet_01v8 ad=3 pd=12.5 as=6 ps=25 w=12 l=0.5
+X22 a_n920_n2580# VP VP VP sky130_fd_pr__pfet_01v8 ad=3 pd=12.5 as=6 ps=25 w=12 l=0.5
+X23 a_n470_n11840# a_n570_n11970# a_n1430_n6660# VN sky130_fd_pr__nfet_01v8 ad=1.5 pd=12.2 as=3 ps=12.5 w=12 l=0.5
+X24 a_n320_n11840# Vcp a_n1120_n5500# VP sky130_fd_pr__pfet_01v8 ad=8.4 pd=13.4 as=9 ps=13.5 w=12 l=0.5
+X25 a_n470_n9340# a_n570_n11970# a_n1430_n6660# VN sky130_fd_pr__nfet_01v8 ad=1.5 pd=12.2 as=3 ps=12.5 w=12 l=0.5
+X26 a_n1430_n6000# V1 a_60_n5500# VN sky130_fd_pr__nfet_01v8 ad=9 pd=13.5 as=6 ps=25 w=12 l=0.5
+X27 a_460_n2580# Vbp a_60_n5500# VP sky130_fd_pr__pfet_01v8 ad=3 pd=12.5 as=9 ps=13.5 w=12 l=0.5
+X28 a_n720_n2580# V1 a_n1430_n6450# VN sky130_fd_pr__nfet_01v8 ad=6 pd=25 as=9 ps=13.5 w=12 l=0.5
+X29 VN VN a_n1430_n6210# VN sky130_fd_pr__nfet_01v8 ad=6 pd=25 as=3 ps=12.5 w=12 l=0.5
+X30 a_n920_n2580# VP VP VP sky130_fd_pr__pfet_01v8 ad=3 pd=12.5 as=6 ps=25 w=12 l=0.5
+X31 a_n720_n2580# Vbp a_n920_n2580# VP sky130_fd_pr__pfet_01v8 ad=9 pd=13.5 as=3 ps=12.5 w=12 l=0.5
+.end
+

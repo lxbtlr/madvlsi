@@ -1,0 +1,488 @@
+
+Circuit 1 cell SKY130_FD_PR__PFET_01V8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes SKY130_FD_PR__PFET_01V8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell SKY130_FD_PR__NFET_01V8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes SKY130_FD_PR__NFET_01V8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Class bias_generator.spice (1):  Merged 29 parallel devices.
+Subcircuit summary:
+Circuit 1: simulation/LVS_BIASGEN.spice    |Circuit 2: bias_generator.spice            
+-------------------------------------------|-------------------------------------------
+SKY130_FD_PR__PFET_01V8 (26)               |sky130_fd_pr__pfet_01v8 (32->18) **Mismatc 
+SKY130_FD_PR__NFET_01V8 (34)               |sky130_fd_pr__nfet_01v8 (34->19) **Mismatc 
+Number of devices: 60 **Mismatch**         |Number of devices: 37 **Mismatch**         
+Number of nets: 30 **Mismatch**            |Number of nets: 28 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: simulation/LVS_BIASGEN.spice    |Circuit 2: bias_generator.spice            
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: a_n6090_7100#                         
+  SKY130_FD_PR__PFET_01V8/2 = 14           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  SKY130_FD_PR__PFET_01V8/3 = 12           |  sky130_fd_pr__nfet_01v8/2 = 2            
+  SKY130_FD_PR__PFET_01V8/4 = 26           |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 6            |                                           
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET2                                  |Net: a_n6030_530#                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET1                                  |Net: a_n6030_11240#                        
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 3        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET5                                  |Net: a_n6430_530#                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__nfet_01v8/(1|3) = 8        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |  sky130_fd_pr__nfet_01v8/4 = 19           
+                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
+                                           |                                           
+Net: NET3                                  |Net: a_n5740_8350#                         
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__nfet_01v8/2 = 11           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET4                                  |Net: a_n4830_11240#                        
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET16                                 |Net: a_n6210_6050#                         
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |  sky130_fd_pr__pfet_01v8/2 = 12           
+                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: NET14                                 |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET18                                 |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET19                                 |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET10                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET11                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET12                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET13                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET9                                  |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET6                                  |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET7                                  |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET8                                  |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET15                                 |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET17                                 |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET23                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+                                           |                                           
+Net: NET24                                 |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: VBN                                   |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/2 = 16           |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 2            |                                           
+                                           |                                           
+Net: GND                                   |(no matching net)                          
+  SKY130_FD_PR__NFET_01V8/3 = 5            |                                           
+  SKY130_FD_PR__NFET_01V8/4 = 34           |                                           
+  SKY130_FD_PR__NFET_01V8/1 = 9            |                                           
+  SKY130_FD_PR__NFET_01V8/2 = 4            |                                           
+                                           |                                           
+Net: VBP                                   |(no matching net)                          
+  SKY130_FD_PR__PFET_01V8/2 = 12           |                                           
+  SKY130_FD_PR__NFET_01V8/1 = 2            |                                           
+  SKY130_FD_PR__PFET_01V8/1 = 2            |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: NET20                                 |Net: w_n6530_3120#                         
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 6        
+  SKY130_FD_PR__PFET_01V8/1 = 1            |  sky130_fd_pr__pfet_01v8/2 = 2            
+  SKY130_FD_PR__NFET_01V8/1 = 6            |  sky130_fd_pr__pfet_01v8/4 = 18           
+  SKY130_FD_PR__NFET_01V8/2 = 12           |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 6            |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: NET21                                 |Net: a_n6230_11240#                        
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+  SKY130_FD_PR__NFET_01V8/1 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  SKY130_FD_PR__NFET_01V8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  SKY130_FD_PR__PFET_01V8/1 = 1            |                                           
+  SKY130_FD_PR__NFET_01V8/3 = 1            |                                           
+                                           |                                           
+Net: NET22                                 |Net: a_n6230_300#                          
+  SKY130_FD_PR__PFET_01V8/1 = 2            |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  SKY130_FD_PR__NFET_01V8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
+  SKY130_FD_PR__NFET_01V8/3 = 2            |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VCN                                   |Net: a_n5930_500#                          
+  SKY130_FD_PR__NFET_01V8/1 = 4            |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
+  SKY130_FD_PR__NFET_01V8/3 = 4            |  sky130_fd_pr__nfet_01v8/2 = 3            
+                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+                                           |                                           
+Net: VCP                                   |Net: a_n5930_11100#                        
+  SKY130_FD_PR__PFET_01V8/1 = 3            |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+  SKY130_FD_PR__PFET_01V8/3 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 3        
+  SKY130_FD_PR__NFET_01V8/1 = 1            |  sky130_fd_pr__pfet_01v8/2 = 3            
+  SKY130_FD_PR__NFET_01V8/3 = 3            |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: simulation/LVS_BIASGEN.spice    |Circuit 2: bias_generator.spice            
+
+---------------------------------------------------------------------------------------
+Instance: SKY130_FD_PR__PFET_01V8:M7       |Instance: sky130_fd_pr__pfet_01v8:7        
+  1 = 8                                    |  (1,3) = (8,3)                            
+  2 = 60                                   |  2 = 8                                    
+  3 = 60                                   |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M5       |Instance: sky130_fd_pr__pfet_01v8:8        
+  1 = 8                                    |  (1,3) = (3,1)                            
+  2 = 60                                   |  2 = 8                                    
+  3 = 60                                   |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M8       |Instance: sky130_fd_pr__pfet_01v8:10       
+  1 = 8                                    |  (1,3) = (8,8)                            
+  2 = 60                                   |  2 = 8                                    
+  3 = 60                                   |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M15      |Instance: sky130_fd_pr__pfet_01v8:18       
+  1 = 60                                   |  (1,3) = (26,5)                           
+  2 = 60                                   |  2 = 14                                   
+  3 = 2                                    |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M16      |Instance: sky130_fd_pr__pfet_01v8:58       
+  1 = 2                                    |  (1,3) = (26,14)                          
+  2 = 60                                   |  2 = 14                                   
+  3 = 2                                    |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M17      |Instance: sky130_fd_pr__pfet_01v8:40       
+  1 = 2                                    |  (1,3) = (5,3)                            
+  2 = 60                                   |  2 = 5                                    
+  3 = 60                                   |  4 = 26                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M18      |Instance: sky130_fd_pr__nfet_01v8:2        
+  1 = 60                                   |  (1,3) = (5,3)                            
+  2 = 60                                   |  2 = 5                                    
+  3 = 2                                    |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M19      |Instance: sky130_fd_pr__nfet_01v8:6        
+  1 = 2                                    |  (1,3) = (8,8)                            
+  2 = 60                                   |  2 = 8                                    
+  3 = 60                                   |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M20      |Instance: sky130_fd_pr__nfet_01v8:9        
+  1 = 60                                   |  (1,3) = (29,3)                           
+  2 = 60                                   |  2 = 8                                    
+  3 = 2                                    |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M21      |Instance: sky130_fd_pr__nfet_01v8:14       
+  1 = 2                                    |  (1,3) = (29,5)                           
+  2 = 60                                   |  2 = 29                                   
+  3 = 2                                    |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M22      |Instance: sky130_fd_pr__nfet_01v8:17       
+  1 = 2                                    |  (1,3) = (29,5)                           
+  2 = 60                                   |  2 = 11                                   
+  3 = 60                                   |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M36      |Instance: sky130_fd_pr__nfet_01v8:35       
+  1 = 60                                   |  (1,3) = (29,5)                           
+  2 = 16                                   |  2 = 29                                   
+  3 = 2                                    |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M37      |Instance: sky130_fd_pr__nfet_01v8:20       
+  1 = 2                                    |  (1,3) = (8,3)                            
+  2 = 16                                   |  2 = 8                                    
+  3 = 2                                    |  4 = 29                                   
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M38      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 16                                   |                                           
+  3 = 2                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M41      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 16                                   |                                           
+  3 = 2                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M42      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 16                                   |                                           
+  3 = 2                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M43      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 16                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M59      |(no matching instance)                     
+  1 = 16                                   |                                           
+  2 = 16                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M62      |(no matching instance)                     
+  1 = 16                                   |                                           
+  2 = 16                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M24      |(no matching instance)                     
+  1 = 60                                   |                                           
+  2 = 60                                   |                                           
+  3 = 8                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M35      |(no matching instance)                     
+  1 = 5                                    |                                           
+  2 = 16                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M1       |(no matching instance)                     
+  1 = 5                                    |                                           
+  2 = 60                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M3       |(no matching instance)                     
+  1 = 5                                    |                                           
+  2 = 60                                   |                                           
+  3 = 60                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M39      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 16                                   |                                           
+  3 = 26                                   |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M40      |(no matching instance)                     
+  1 = 26                                   |                                           
+  2 = 16                                   |                                           
+  3 = 2                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__PFET_01V8:M44      |(no matching instance)                     
+  1 = 60                                   |                                           
+  2 = 16                                   |                                           
+  3 = 5                                    |                                           
+  4 = 60                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M25      |(no matching instance)                     
+  1 = 8                                    |                                           
+  2 = 18                                   |                                           
+  3 = 52                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M14      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 52                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M23      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M26      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M27      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M28      |(no matching instance)                     
+  1 = 60                                   |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M29      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 60                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M30      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M31      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M32      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M33      |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 18                                   |                                           
+  3 = 2                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M57      |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 18                                   |                                           
+  3 = 18                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M58      |(no matching instance)                     
+  1 = 16                                   |                                           
+  2 = 18                                   |                                           
+  3 = 52                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M60      |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 18                                   |                                           
+  3 = 18                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M61      |(no matching instance)                     
+  1 = 16                                   |                                           
+  2 = 18                                   |                                           
+  3 = 52                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M34      |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 18                                   |                                           
+  3 = 8                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M6       |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 52                                   |                                           
+  3 = 8                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M9       |(no matching instance)                     
+  1 = 52                                   |                                           
+  2 = 52                                   |                                           
+  3 = 8                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M45      |(no matching instance)                     
+  1 = 8                                    |                                           
+  2 = 5                                    |                                           
+  3 = 5                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M47      |(no matching instance)                     
+  1 = 26                                   |                                           
+  2 = 26                                   |                                           
+  3 = 26                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M48      |(no matching instance)                     
+  1 = 26                                   |                                           
+  2 = 26                                   |                                           
+  3 = 26                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M53      |(no matching instance)                     
+  1 = 26                                   |                                           
+  2 = 26                                   |                                           
+  3 = 26                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M51      |(no matching instance)                     
+  1 = 8                                    |                                           
+  2 = 26                                   |                                           
+  3 = 52                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M52      |(no matching instance)                     
+  1 = 26                                   |                                           
+  2 = 26                                   |                                           
+  3 = 8                                    |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M54      |(no matching instance)                     
+  1 = 2                                    |                                           
+  2 = 26                                   |                                           
+  3 = 26                                   |                                           
+  4 = 52                                   |                                           
+                                           |                                           
+Instance: SKY130_FD_PR__NFET_01V8:M56      |(no matching instance)                     
+  1 = 5                                    |                                           
+  2 = 5                                    |                                           
+  3 = 8                                    |                                           
+  4 = 52                                   |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Cells have no pins;  pin matching not needed.
+Device classes simulation/LVS_BIASGEN.spice and bias_generator.spice are equivalent.
+
+Final result: Netlists do not match.

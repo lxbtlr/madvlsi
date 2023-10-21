@@ -1,0 +1,89 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Class simulation/lfs.spice (0):  Merged 4 parallel devices.
+Class diffamp.spice (1):  Merged 4 parallel devices.
+Subcircuit summary:
+Circuit 1: simulation/lfs.spice            |Circuit 2: diffamp.spice                   
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (18->17)           |sky130_fd_pr__nfet_01v8 (20->18) **Mismatc 
+sky130_fd_pr__pfet_01v8 (12->9)            |sky130_fd_pr__pfet_01v8 (12->10) **Mismatc 
+Number of devices: 26 **Mismatch**         |Number of devices: 28 **Mismatch**         
+Number of nets: 21 **Mismatch**            |Number of nets: 24 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: simulation/lfs.spice            |Circuit 2: diffamp.spice                   
+
+---------------------------------------------------------------------------------------
+Net: GND                                   |Net: VN                                    
+  sky130_fd_pr__nfet_01v8/(1|3) = 10       |  sky130_fd_pr__nfet_01v8/4 = 18           
+  sky130_fd_pr__nfet_01v8/4 = 17           |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__nfet_01v8/2 = 3            |  sky130_fd_pr__nfet_01v8/2 = 4            
+                                           |                                           
+Net: VDD                                   |Net: a_n570_n11970#                        
+  sky130_fd_pr__pfet_01v8/(1|3) = 6        |  sky130_fd_pr__nfet_01v8/2 = 4            
+  sky130_fd_pr__pfet_01v8/4 = 9            |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+                                           |                                           
+(no matching net)                          |Net: VP                                    
+                                           |  sky130_fd_pr__pfet_01v8/4 = 10           
+                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+                                           |  sky130_fd_pr__pfet_01v8/2 = 2            
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: Vcp                                   |Net: Vcp                                   
+  sky130_fd_pr__pfet_01v8/2 = 4            |  sky130_fd_pr__pfet_01v8/2 = 4            
+                                           |                                           
+Net: Vcn                                   |Net: Vcn                                   
+  sky130_fd_pr__nfet_01v8/2 = 4            |  sky130_fd_pr__nfet_01v8/2 = 4            
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: out                                   |Net: a_n320_n11840#                        
+  sky130_fd_pr__pfet_01v8/(1|3) = 2        |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: Vbp                                   |Net: Vbp                                   
+  sky130_fd_pr__pfet_01v8/2 = 4            |  sky130_fd_pr__pfet_01v8/2 = 4            
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: V_1                                   |Net: V1                                    
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
+                                           |                                           
+Net: V_2                                   |Net: V2                                    
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
+                                           |                                           
+Net: Vbn                                   |Net: Vbn                                   
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: simulation/lfs.spice            |Circuit 2: diffamp.spice                   
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__nfet_01v8:M86      |(no matching instance)                     
+  (1,3) = (30,30)                          |                                           
+  2 = 30                                   |                                           
+  4 = 30                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:M83      |(no matching instance)                     
+  (1,3) = (16,16)                          |                                           
+  2 = 16                                   |                                           
+  4 = 16                                   |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Cells have no pins;  pin matching not needed.
+Device classes simulation/lfs.spice and diffamp.spice are equivalent.
+
+Final result: Netlists do not match.
